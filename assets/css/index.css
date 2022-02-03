@@ -39,12 +39,12 @@ welcome
     line-height: 80px;
     letter-spacing: 1px;
     margin-bottom: 30px;
-    color: #191a20;
+    color: #1e1e1e;
 }
 
 .welcome-area .header-text h1 em {
     font-style: normal;
-    color: #fba70b;
+    color: #7DD1F8;
 }
 
 .welcome-area .header-text p {
@@ -181,7 +181,7 @@ feature
 .features-item .features-icon .social li a {
     height: 40px;
     width: 40px;
-    color: #f2615f;
+    color: #13ABF2;
 }
 
 .feature-menu {

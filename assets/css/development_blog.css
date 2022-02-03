@@ -1,0 +1,51 @@
+#dev_blog_header .container .row h1 {
+
+    text-align: center;
+    font-size: 42px;
+    font-weight: 500;
+    color: #1e1e1e;
+    margin-bottom: 25px;
+}
+
+#dev_blog_header .container .row h1 img {
+
+    width: 50px;
+}
+
+#dev-section .container .row .col-lg-12{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.image-content {
+    width: 50%;
+
+    margin: 20px 25%;
+}
+
+.dev-blog-month {
+    margin: 0 0 50px;
+}
+
+.dev-blog-month-header {
+    margin: 0 0 20px;
+}
+
+.dev-navbar {
+    width: 150px;
+}
+
+.dev-navbar ul li {
+    width: inherit;
+}
+
+/* .dev-navbar {
+    background-color: aqua;
+}
+
+.dev-blog {
+    background-color: brown;
+} */
