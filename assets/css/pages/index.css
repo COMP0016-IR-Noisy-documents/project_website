@@ -49,6 +49,10 @@
     width: 100%;
 }
 
+#team-members .dev-image {
+    height: auto;
+}
+
 @media (max-width: 768px) {
 
     .landing-contents {
