@@ -72,7 +72,11 @@ img {
     margin-left: 15%;
 }
 
-
+.small-size-image {
+    
+    width: 300px;
+    
+}
 /* the components that may be re-used  */
 
 section {

@@ -90,9 +90,12 @@
         <!-- topic -->
         <h3>System Architecture</h3>
         <!-- contents -->
-        <p>Our application ecosystem consists of the following components: frontend application, backend application, elastic server, and PostgreSQL. The frontend and the backend part was deployed in the azure kubenetes service(AKS) while the database was
-            deployed separately. Once the user called the application the kubenetes ingress will find the correct route of the frontend application. While the frontend application have to call the backend application. The ingress will direct the frontend
-            application request. Elastic server and PostgreSQL are connected to the backend application.
+        <p>Our application ecosystem consists of a frontend application, backend application, Elasticsearch server, and a PostgreSQL database.
+            The frontend and the backend part was deployed in the Azure Kubernetes service (AKS) while the database was deployed separately.
+            Once the user called the application the Kubernetes ingress will find the correct route of the frontend application.
+            Then the frontend application has to call the backend application through our API.
+            The ingress will direct the frontend application request.
+            The Elasticsearch server and PostgreSQL database are connected to the backend application.
         </p>
         <img src="../assets/images/design/system-design.png" alt="" class="large-size-image">
     </section>
