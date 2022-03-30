@@ -87,15 +87,15 @@
         </p>
         <b>Experiments</b>
         <p align="justify">In order to test the efficiency of these algorithms, we used the judgement list given in the dataset. We chose to use nDCG@10 and nDCG@5 as metrics for accuracy, which is given by:</p>
-        <img src="../assets/images/nDCG.png" alt="" align="center" class="mid-size-image">
+        <img src="../assets/images/nDCG.png" alt=""  class="small-size-image" style="display: block;margin-left: auto;margin-right: auto;">
         <p align="justify">Where k= 5 or 10, reli is the relevance score of document I on the judgement list, and relk represents the list of relevant documents (ordered by their relevance) in the corpus up to position k.
             <br>
             To perform the testing, we used Elasticsearch’s ranking evaluation module [16], which allows getting the nDCG@k scores for a set of queries given a list of (query, document, score) triples. We used that method to get nDCG@10 and nDCG@5 scores for all of the mentioned algorithms with and without stemming, for all of the queries in the judgement list.
             <br><br>
             Using the methodology described above, we ran the tests and compiled the results for all queries in the testing judgement list.
         </p>
-        <img src="../assets/images/testing results.png" alt="" class="mid-size-image">
-        <b>Discussions & analysis</b>
+        <img src="../assets/images/testing results.png" alt="" class="mid-size-image" style="display: block;margin-left: auto;margin-right: auto;">
+        <br><b>Discussions & analysis</b>
         <p align="justify">As we can see, algorithms with stemming consistently perform better than their counterparts. It also seems like the best performing retrieval algorithm is LambdaMart with stemming. However, using Wilcoxon rank-signed tests [14], we found that the algorithms are not distinguishable, as none of the results is statistically significant. This lack of difference could be due to the limitations of the bag-of-words strategy [6]. We cannot reject the hypothesis that they all follow the same distribution.
             Some queries suffer a lot from the noise created by automatic speech transcription. For example, the query Fauci interview consistently gets an nDCG score of 0 for all of the algorithms.
             Using a larger sample of the dataset could make the results more precise.<br>
