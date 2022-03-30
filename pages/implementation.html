@@ -71,8 +71,10 @@
         <!-- topic -->
         <h3>Search Implementation</h3>
         <!-- contents -->
-        <p>[Insert text]</p>
-    </section>
+        <p align="justify">When the back-end API receives a search request, it parses the JSON object to retrieve the query and the filters. It then passes the request with parameters (query, filters) to the Controller which in turn sends it to the Model. The model stores a SearchEngine object, which has a search() method. This object sends a GET  search 
+            request to the ElasticSearch API with the query and the formatted filters. When it retrieves the response, it formats it as a Pandas DataFrame and sends it to the model. Using parallel get requests to the X5GON api, the Model adds metadata to the search results. These results are then sent back to the Controller which translates it to JSON and sends it back to the API endpoint.</p>
+        <img src="../assets/images/search.png">
+        </section>
 
     <!-- the first re-usable section with topic and contents -->
     <section class="section" id="user-data">
