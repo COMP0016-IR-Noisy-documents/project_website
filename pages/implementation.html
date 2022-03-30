@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../assets/css/Header.css">
     <link rel="stylesheet" href="../assets/css/Footer.css">
 
-    <link rel="stylesheet" href="../assets/css/pages/index.css">
+    <link rel="stylesheet" href="../assets/css/pages/implement.css">
 
 </head>
 
@@ -62,9 +62,73 @@
     <!-- the first re-usable section with topic and contents -->
     <section class="section" id="front-end">
         <!-- topic -->
+        <h3>Technology</h3>
+        <!-- contents -->
+        <h4>Frontend</h4>
+        <div class="image-bundle">
+            <img src="../assets/images/implementation/technology/react.png">
+            <div>
+                <h5>Framework: React</h5>
+                <p>Library: react-cookie (for using cookie),react-redux (for using redux), react-icons, react-router-dom (managing route),runtime-env-cra(inject runtime environment on production environment), framer-motion(make animation)</p>
+            </div>
+        </div>
+
+        <h4>Backend</h4>
+        <div class="image-bundle">
+            <img src="../assets/images/implementation/technology/flask.png">
+            <div>
+                <h5>Framework: Flask</h5>
+                <p>Library: elasticsearch, flask, flask_migrate, Flask-SQLAlchemy(using sql), Flask-Cors, gunicorn (building docker container), pandas, psycopg2 (postgresql), pytest, pyjwt (make jwt token), python-dotenv, requests, requests-futures
+                </p>
+            </div>
+        </div>
+
+        <h4>Deployment</h4>
+        <div class="image-bundle">
+            <img src="../assets/images/implementation/technology/docker.png">
+            <div>
+                <h5>Docker</h5>
+                <p>Docker is used for building docker container to deploy on the kubenetes cluster</p>
+            </div>
+        </div>
+        <div class="image-bundle">
+            <img src="../assets/images/implementation/technology/kubenetes.png">
+            <div>
+                <h5>kubenetes</h5>
+                <p>The Frontend and API was deployed on the kubenetes cluster</p>
+            </div>
+        </div>
+        <div class="image-bundle">
+            <img src="../assets/images/implementation/technology/azure.png">
+            <div>
+                <h5>Azure</h5>
+                <p>For deploying database and kubenetes cluster</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- the first re-usable section with topic and contents -->
+    <section class="section" id="front-end">
+        <!-- topic -->
         <h3>Frontend Implementation</h3>
         <!-- contents -->
-        <p>[Insert text]</p>
+        <p>According to the use case diagram in the requirements
+            <a href="requirements.html#use-cases" target="_blank" rel="noopener noreferrer">page</a>, we are building the search, register, login, and privacy policy page by using react-router-dom and nginx (production) for managing route in react.
+        </p>
+        <h4>search</h4>
+        <p>we build the google-like search-page in the home route. When the user click on the search form, the application will fetch the related API and show the result in the Resultlist components. The image below show the search page(before and after
+            searching) respectively</p>
+        <img src="../assets/images/implementation/header_login.PNG" alt="" class="mid-size-image">
+        <img src="../assets/images/implementation/search-result.PNG" alt="" class="mid-size-image">
+        <h4>login and signup</h4>
+        <p>the implementation details are shown
+            <a href="implementation.html#impl-frontend">below</a>
+        </p>
+        <img src="../assets/images/implementation/header_login.PNG" alt="" class="mid-size-image">
+        <img src="../assets/images/implementation/search-result.PNG" alt="" class="mid-size-image">
+        <h4>Privacy Notice</h4>
+        <p>use privacy-notice route to manage show our privacy policy</p>
+        <img src="../assets/images/implementation/privacy.PNG" alt="" class="mid-size-image">
     </section>
 
     <!-- the first re-usable section with topic and contents -->
@@ -91,7 +155,7 @@
             <li>we collect the username, password, displayname, and email from the user. After that we are quering the database if the username and email has been taken. If those are not taken the new user will be generated with the following parameter userID,
                 username, password(hashed with salt), salt, displayname, public-id(the id expose to the frontend), timestamp </li>
         </ul>
-        <p>Login - /login</p>
+        <p id="impl-frontend">Login - /login</p>
         <ul>
             <li>we collect the username, password from the user. If that user does exist the API will make the json web token (JWT) using genJWT() with expired date</li>
         </ul>
