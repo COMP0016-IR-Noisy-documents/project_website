@@ -32,9 +32,7 @@
             <li class="submenu">
                 <a class="mainlink" href="requirements.html">Requirements</a>
             </li>
-            <li class="submenu" class="submenu">
-                <a class="mainlink" href="hci.html">HCI</a>
-            </li>
+
             <li class="submenu" class="submenu">
                 <a class="mainlink" href="research.html">Research</a>
             </li>
@@ -95,8 +93,8 @@
     <section class="section" id="personas">
         <h3>Personas</h3>
         <div class="gallery js-flickity" data-flickity-options='{ "freeScroll": true, "wrapAround": true }'>
-            <div class="gallery-cell"><img src="../assets/images/personas/Persona1.svg" alt="persona1"></div>
-            <div class="gallery-cell"><img src="../assets/images/personas/Persona2.svg" alt="persona2"></div>
+            <div class="gallery-cell"><img src="../assets/images/personas/Persona1.svg" alt="persona1" class="large-size-image"></div>
+            <div class="gallery-cell"><img src="../assets/images/personas/Persona2.svg" alt="persona2" class="large-size-image"></div>
         </div>
     </section>
     <!-- ***** Personas End ***** -->
@@ -105,7 +103,7 @@
     <section class="section top-section" id="project-goal">
         <h3>Use Cases</h3>
         <p>From the user personas, we could sketch a use cases diagram as shown below</p>
-        <img src="../assets/images/requirements/use-case-diagram.png" alt="use cases diagram">
+        <img src="../assets/images/requirements/use-case-diagram.png" alt="use cases diagram" class="large-size-image">
     </section>
     <!-- ***** Use Cases End ***** -->
 
@@ -115,59 +113,11 @@
         <h3>MoSCoW List</h3>
         <h4>Software Engineering</h4>
         <div class="MOSCOW">
-            <div>MUST</div>
-            <ul>
-                <li>Develop an API to allow "plugging in" different search algorithms</li>
-                <li>Have all the libraries be open source</li>
-                <li>Create a Google-like web user interface (UI) to search for content that interacts with the API to display relevant search results</li>
-                <li></li>
-            </ul>
-            <div>SHOULD</div>
-            <ul>
-                <li>Show more interesting information about each material: summary of the contents, thumbnail, author/source information. in the search results</li>
-                <li>User account functionalities</li>
-                <li>Make the interface responsive</li>
-            </ul>
-            <div>COULD</div>
-            <ul>
-                <li>Display user interests/ statistics in the interface with charts</li>
-            </ul>
-            <div>WON'T</div>
-            <ul>
-                <li>Allow users to create and share watchlists</li>
-                <li>Advanced search interface</li>
-                <li>Show users recommendations based on their history</li>
-            </ul>
+            <img src="../assets/images/requirements/moscow-se.png" alt="" class="large-size-image">
         </div>
         <h4>Machine Learning</h4>
         <div class="MOSCOW">
-            <div>MUST</div>
-            <ul>
-                <li>Have an algorithm able to retrieve the topic of text files/transcripts and accounting for the noisy nature of transcripts.</li>
-                <li>Respect GDPR and other ethical rules</li>
-                <li>Create a search model/algorithm</li>
-                <li>Use elastic search for the search algorithm</li>
-                <li>Have all the libraries be open source</li>
-                <li>Test our search and topic modelling algorithms through statistical analysis (Benchmarking)</li>
-            </ul>
-            <div>SHOULD</div>
-            <ul>
-                <li>Test the search result quality through a survey</li>
-                <li>Test the search results on relevance-labeled data sets</li>
-                <li>Improve time efficiency on the base models/algorithms</li>
-            </ul>
-            <div>COULD</div>
-            <ul>
-                <li>Have a better content representation that accounts for transcription errors</li>
-                <li>Use deep learning /a neural model to improve the topic modeling</li>
-                <li>Save a part of the data set to test the accuracy of the topic modeling algorithm against manually labeled data</li>
-            </ul>
-            <div>WON'T</div>
-            <ul>
-                <li>Retrieve other information than the main topics from the files (tone, number of chapters…</li>
-                <li>Show difficulty estimations of the documents to users (readability score)</li>
-                <li>Estimate the current knowledge level of the user using their learning history</li>
-            </ul>
+            <img src="../assets/images/requirements/moscow-ml.png" alt="" class="large-size-image">
         </div>
     </section>
     <!-- ***** MoSCoW List End ***** -->

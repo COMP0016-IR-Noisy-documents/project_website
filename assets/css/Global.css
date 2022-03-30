@@ -64,6 +64,12 @@ img {
 
 .mid-size-image {
     width: 50%;
+    margin-left: 25%;
+}
+
+.large-size-image {
+    width: 70%;
+    margin-left: 15%;
 }
 
 
