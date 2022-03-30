@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Header</title>
+    
+        <link rel="stylesheet" href="../../assets/css/Global.css">
+        <link rel="stylesheet" href="../../assets/css/Header.css">
+        <link rel="stylesheet" href="../../assets/css/Footer.css">
+    
+        <link rel="stylesheet" href="../../assets/css/pages/index.css">
+    </head>
+
+<body>
+
+    <section class="section" id="critical-evaluation">
+        <!-- topic -->
+        <h3>Deployment Manual</h3>
+        <h4>Database Deployment</h4>
+        <!-- contents -->
+        <h5>PostgreSQL</h5>
+        <ol>
+            <li>Search for PostgreSQL service in azure</li>
+            <li>Deploy as a single server</li>
+            <li>Specify Subscription, Resource group, Region, Admin username, and Admin password.</li>
+            <li>Review and create a new database.</li>
+            <li>Create a SQL table based on schema shown in the ER diagram below.</li>
+            <img src="PostgreSQL/ERdiagram.PNG" alt="">
+        </ol>
+        
+        <h5>Elastic server</h5>
+        <ol>
+            <li>Navigate to <a href="https://www.elastic.co/" target="_blank" rel="noopener noreferrer">elastic.co</a></li>
+            <li>Log in to the user account. </li>
+            <li>Click on the create deployment and record the username and password of the elastic search deployment.</li>
+            <img src="Elastic/elastic1.PNG" alt="">
+            <li>Go to the elastic search deployment and upload the file to the elastic server.</li>
+            <li>Run the “app_api” repository’s python file “elasticsearch_utils.py” that is located in the "source/controller/search_engine" in order to set the search algorithm.</li>
+        </ol>
+
+        <h4>Azure Docker Registry</h4>
+        <ol>
+            <li>Search for Container registries service in azure</li>
+            <li>Create a new registry</li>
+            <li>Specify Subscription, Resource group, Region, registryname, and SKU </li>
+            <li>Login to your registry using the following command</li>
+            <code>docker login <registryname>.azurecr.io</code>
+        </ol>
+        <h5>Frontend</h5>
+        <ol>
+            <li>Build your docker image in the local device using the following command</li>
+            <code>docker build -t <registryname>.azurecr.io/ir_project_web:v1</code>
+            <li>Push image to the azure docker registry using the following command</li>
+            <code>docker push <registryname>.azurecr.io/ir_project_web:v1</code>
+        </ol>
+        <h5>Backend</h5>
+        <ol>
+            <li>Build your docker image in the local device using the following command</li>
+            <code>docker build -t <registryname>.azurecr.io/ir_project_app_api:v1</code>
+            <li>Push image to the azure docker registry using the following command</li>
+            <code>docker push <registryname>.azurecr.io/ir_project_app_api:v1</code>
+        </ol>
+
+        <h4>Kubenetes cluster</h4>
+        <h5>Build cluster</h5>
+        <ol>
+            <li>Clone Deployment from the organisation "COMP0016-IR-Noisy-documents" </li>
+            <li><code>cd Deployment</code></li>  
+            <li>Search for the Kubernetes service.</li>
+            <li>Create a Kubernetes cluster</li>
+            <li>Specify Subscription, Resource group, Region and Kubernetes Version</li>
+            <li>Specify Docker Container Registry created in the Azure Docker Registry step.</li>
+            <li>Review and create</li>
+        </ol>
+
+        <h5>Deployment on the cluster</h5>
+        <ol>
+            <li>Clone Deployment from the organisation "COMP0016-IR-Noisy-documents" </li>
+            <li><code>cd Deployment</code></li>
+            <li>Login to the cluster by going to the Kubenetes dashboard<br>click on connect and type the command shown on the right side of the screenshot</li> 
+            <img src="Kubenetes/deploy1.PNG" alt=""> 
+            <li>type command</li>
+            <code>kubectl apply -f kube-config</code>
+            <li>find the external ip address by searching for Public IP addresses service in the azure dashboard and choose the one starting with Kubenetes with the corresponding resource group</li>
+            <img src="Kubenetes/ip.PNG" alt=""> 
+            <li>navigate to the ip address to start using the deployed website</li>
+        </ol>
+    </section>
