@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-
 .landing-pages {
     background-image: url(../../images/Background.svg);
     background-repeat: no-repeat;
@@ -16,7 +15,6 @@
     font-weight: 400;
 }
 
-
 .landing-pages button {
     font-size: 20px;
     border: none;
@@ -25,12 +23,16 @@
     border-radius: 10px;
 }
 
+.landing-pages button a {
+    text-decoration: none;
+}
+
 .landing-contents {
     margin: 0 150px;
     padding: 50px 0;
 }
 
-.landing-pages em{
+.landing-pages em {
     font-family: 'Lobster', cursive;
 }
 
@@ -54,17 +56,13 @@
 }
 
 @media (max-width: 768px) {
-
     .landing-contents {
         margin: 100px 50px;
     }
 }
 
-
 @media (max-width: 480px) {
-
     .landing-contents {
         margin: 0 50px;
     }
 }
-
