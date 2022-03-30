@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
 
 /* overwrite default value */
+
 html {
     font-family: 'IBM Plex Sans', sans-serif;
     margin: 0;
@@ -61,7 +62,13 @@ img {
     width: 100%;
 }
 
+.mid-size-image {
+    width: 50%;
+}
+
+
 /* the components that may be re-used  */
+
 section {
     margin: 50px 150px;
 }
@@ -70,7 +77,8 @@ section {
     color: #0f89c2;
 }
 
-.section p, img {
+.section p,
+img {
     padding-top: 15px;
 }
 
@@ -92,24 +100,19 @@ section {
 }
 
 @media (max-width: 768px) {
-
     section {
         margin: 100px 50px;
     }
-
     section .card {
         display: flex;
         flex-wrap: wrap;
     }
-
     section .card .card-element {
         flex: 1;
     }
 }
 
-
 @media (max-width: 480px) {
-
     section {
         margin: 50px 50px;
     }

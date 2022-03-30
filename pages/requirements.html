@@ -65,12 +65,9 @@
         <!-- topic -->
         <h3>Project Background</h3>
         <!-- contents -->
-        <p>This project entails building an AI-powered Information Retrieval Engine that can carry out information
-            retrieval using noisy documents where documents are generated via transcription that can introduce errors.
-            The work entails initial research into existing methods of robust information retrieval and solutions
-            proposed for similar problems, preparing a research report from the findings, identifying the requirements,
-            and proposing a solution application that can carry out information retrieval with noisy data, and finally,
-            development and deployment of the proposed system with necessary integrations.</p>
+        <p>This project entails building an AI-powered Information Retrieval Engine that can carry out information retrieval using noisy documents where documents are generated via transcription that can introduce errors. The work entails initial research
+            into existing methods of robust information retrieval and solutions proposed for similar problems, preparing a research report from the findings, identifying the requirements, and proposing a solution application that can carry out information
+            retrieval with noisy data, and finally, development and deployment of the proposed system with necessary integrations.</p>
     </section>
 
     <!-- the first re-usable section with topic and contents -->
@@ -78,12 +75,9 @@
         <!-- topic -->
         <h3>Client Requirements</h3>
         <!-- contents -->
-        <p>This project entails building an AI-powered Information Retrieval Engine that can carry out information
-            retrieval using noisy documents where documents are generated via transcription that can introduce errors.
-            The work entails initial research into existing methods of robust information retrieval and solutions
-            proposed for similar problems, preparing a research report from the findings, identifying the requirements,
-            and proposing a solution application that can carry out information retrieval with noisy data, and finally,
-            development and deployment of the proposed system with necessary integrations.</p>
+        <p>This project entails building an AI-powered Information Retrieval Engine that can carry out information retrieval using noisy documents where documents are generated via transcription that can introduce errors. The work entails initial research
+            into existing methods of robust information retrieval and solutions proposed for similar problems, preparing a research report from the findings, identifying the requirements, and proposing a solution application that can carry out information
+            retrieval with noisy data, and finally, development and deployment of the proposed system with necessary integrations.</p>
     </section>
 
     <!-- the first re-usable section with topic and contents -->
@@ -91,20 +85,16 @@
         <!-- topic -->
         <h3>Project Goals</h3>
         <!-- contents -->
-        <p>This project entails building an AI-powered Information Retrieval Engine that can carry out information
-            retrieval using noisy documents where documents are generated via transcription that can introduce errors.
-            The work entails initial research into existing methods of robust information retrieval and solutions
-            proposed for similar problems, preparing a research report from the findings, identifying the requirements,
-            and proposing a solution application that can carry out information retrieval with noisy data, and finally,
-            development and deployment of the proposed system with necessary integrations.</p>
+        <p>This project entails building an AI-powered Information Retrieval Engine that can carry out information retrieval using noisy documents where documents are generated via transcription that can introduce errors. The work entails initial research
+            into existing methods of robust information retrieval and solutions proposed for similar problems, preparing a research report from the findings, identifying the requirements, and proposing a solution application that can carry out information
+            retrieval with noisy data, and finally, development and deployment of the proposed system with necessary integrations.</p>
     </section>
 
 
     <!-- ***** Personas Start ***** -->
     <section class="section" id="personas">
         <h3>Personas</h3>
-        <div class="gallery js-flickity"
-        data-flickity-options='{ "freeScroll": true, "wrapAround": true }'>
+        <div class="gallery js-flickity" data-flickity-options='{ "freeScroll": true, "wrapAround": true }'>
             <div class="gallery-cell"><img src="../assets/images/personas/Persona1.svg" alt="persona1"></div>
             <div class="gallery-cell"><img src="../assets/images/personas/Persona2.svg" alt="persona2"></div>
         </div>
@@ -114,13 +104,8 @@
     <!-- ***** Use Cases Start ***** -->
     <section class="section top-section" id="project-goal">
         <h3>Use Cases</h3>
-        <p>This project entails building an AI-powered Information Retrieval Engine that can carry out information
-            retrieval using noisy documents where documents are generated via transcription that can introduce errors.
-            The work entails initial research into existing methods of robust information retrieval and solutions
-            proposed for similar problems, preparing a research report from the findings, identifying the requirements,
-            and proposing a solution application that can carry out information retrieval with noisy data, and finally,
-            development and deployment of the proposed system with necessary integrations.</p>
-        <img src="../assets/images/personas/Persona2.svg" alt="use cases diagram">
+        <p>From the user personas, we could sketch a use cases diagram as shown below</p>
+        <img src="../assets/images/requirements/use-case-diagram.png" alt="use cases diagram">
     </section>
     <!-- ***** Use Cases End ***** -->
 
@@ -132,18 +117,57 @@
         <div class="MOSCOW">
             <div>MUST</div>
             <ul>
-                <li>req444444</li>
-                <li>req444444</li>
+                <li>Develop an API to allow "plugging in" different search algorithms</li>
+                <li>Have all the libraries be open source</li>
+                <li>Create a Google-like web user interface (UI) to search for content that interacts with the API to display relevant search results</li>
+                <li></li>
             </ul>
             <div>SHOULD</div>
             <ul>
-                <li>req444444</li>
-                <li>req444444</li>
+                <li>Show more interesting information about each material: summary of the contents, thumbnail, author/source information. in the search results</li>
+                <li>User account functionalities</li>
+                <li>Make the interface responsive</li>
+            </ul>
+            <div>COULD</div>
+            <ul>
+                <li>Display user interests/ statistics in the interface with charts</li>
+            </ul>
+            <div>WON'T</div>
+            <ul>
+                <li>Allow users to create and share watchlists</li>
+                <li>Advanced search interface</li>
+                <li>Show users recommendations based on their history</li>
             </ul>
         </div>
         <h4>Machine Learning</h4>
         <div class="MOSCOW">
-
+            <div>MUST</div>
+            <ul>
+                <li>Have an algorithm able to retrieve the topic of text files/transcripts and accounting for the noisy nature of transcripts.</li>
+                <li>Respect GDPR and other ethical rules</li>
+                <li>Create a search model/algorithm</li>
+                <li>Use elastic search for the search algorithm</li>
+                <li>Have all the libraries be open source</li>
+                <li>Test our search and topic modelling algorithms through statistical analysis (Benchmarking)</li>
+            </ul>
+            <div>SHOULD</div>
+            <ul>
+                <li>Test the search result quality through a survey</li>
+                <li>Test the search results on relevance-labeled data sets</li>
+                <li>Improve time efficiency on the base models/algorithms</li>
+            </ul>
+            <div>COULD</div>
+            <ul>
+                <li>Have a better content representation that accounts for transcription errors</li>
+                <li>Use deep learning /a neural model to improve the topic modeling</li>
+                <li>Save a part of the data set to test the accuracy of the topic modeling algorithm against manually labeled data</li>
+            </ul>
+            <div>WON'T</div>
+            <ul>
+                <li>Retrieve other information than the main topics from the files (tone, number of chapters…</li>
+                <li>Show difficulty estimations of the documents to users (readability score)</li>
+                <li>Estimate the current knowledge level of the user using their learning history</li>
+            </ul>
         </div>
     </section>
     <!-- ***** MoSCoW List End ***** -->
@@ -185,7 +209,6 @@
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
     <script>
-        
     </script>
 </body>
 
